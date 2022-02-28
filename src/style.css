@@ -10,17 +10,17 @@
 
 section{
     height: auto;
-    /* height: 500px; */
     background: black;
     border-top:1px solid white;
     border-bottom: solid white 1px;
 }
 
 .header_Bar{
-    height: 20px;
+    height: 49px;
     color: white;
-    font-size: 10px;
+    font-size: 24px;
     font-family: 'Lato', sans-serif;
+    border-top:1px solid black;
 }
 
 footer {
@@ -30,11 +30,34 @@ footer {
     padding: 80px;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    all: unset;
+    font-size: 40px;
+}
+
+span{
+    color: red;
+}
+
+.logo {
+    height: fit-content;
+    width: 175px;
+    text-align: center;
+    cursor: pointer;
+}
+
 ul {
     display: flex;
     list-style-type: none;
-    justify-content: space-evenly;
-    margin-top: 4px;
+    /* margin-top: -18px; */
+    justify-content: flex-end;
+    width: 1200px;
+    gap: 20px;
 }
 
 li {
@@ -44,7 +67,7 @@ li {
 
 section.Design{
     background-color: white; 
-    height: 290px;
+    height: 748px;
 }
 
 .Design_Area {
@@ -58,28 +81,34 @@ section.Design{
 }
 
 strong{
-    text-shadow:
+    /* text-shadow:
      4px 0px 0px white, 
      0px 0px 0px #ff6767, 
      0px 0px 0px white,
      -2px -3px 0px #ff6767, 
-     0px -5px 0px #198dcf;
+     0px -5px 0px #198dcf; */
+     text-shadow:
+         15px 0px 0px white, 
+         7px 0px 0px #ff6767 , 
+         0px -7px 0px #ff6767, 
+         0px -12px 0px #198dcf;
     -webkit-text-stroke: thin;
     -webkit-text-fill-color: transparent;
-    font-size: 100px;
-    font-weight: 100;
+    font-size: 230px;
+    font-weight: 800;
     
 }
 
 p{
-    font-size: 10px;
-    font-weight: 900;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 .aboutMe {
     display: flex;
     justify-content: space-around;
     padding: 80px;
+    border-bottom: 1px solid black;
 }
 
 .photo{
@@ -107,8 +136,9 @@ img.photoOfMe{
 } 
 
 .info{
-    font-size: 10px;
-    font-weight: 400px;
+    font-size: 18px;
+    font-weight: 700px;
+    /* width: 874px; */
 } 
 
 .designPage{
@@ -117,6 +147,8 @@ img.photoOfMe{
     align-items: center;     */
     color: white;
     padding: 80px;
+    background: #04020F;
+    border-top:1px solid #04020F ;
 }
 
 .designPage .design_Div {
@@ -124,6 +156,8 @@ img.photoOfMe{
     flex-direction: column;
     /* width: 264px; */
     font-family: Poppins;
+    width: 700px;
+    margin-left: 230px;
     /* align-items: center;  */
 }
 
@@ -134,65 +168,80 @@ img.photoOfMe{
 }
 
 .design_Div p{
-    font-size:  10px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 700px;
 }
 
 .grid {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .grid_Container{
     display: flex;
-    column-gap: 130px;
-    margin-top: 15px;
+    column-gap: 72px;
+    margin-top: 34px;
 }
 .grid_Container1 {
     display: flex;
-    column-gap: 130px;
-    margin-top: 10px;
+    column-gap: 72px;
+    margin-top: 34px;
 }
 
-.grid_Images{
-    height: 190px;
+/* .grid_Images{
+    height: 175px;
     width: 160px;
     border: 1px solid white;
 }
 .grid_Images1{
     display: flex;
     flex-direction: row;
-    height: 190px;
+    height: 175px;
     width: 160px;
     border: 1px solid white;
-}
+} */
 
 .image1{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 .image2{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 .image3{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 .image4{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 .image5{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 .image6{
-    height: 190px;
+    height: 175px;
     width: 160px;
+    border-radius: 29px;
 }
 
+/*-----------------------------Mobile VIEW ----------------------------------------------------*/
+
 @media only screen and (max-width: 425px){
+    .logo {
+        height: fit-content;
+        width: 175px;
+        text-align: center;
+    }
+
     .aboutMe{
         display: flex;
         flex-wrap: wrap;
@@ -207,6 +256,12 @@ img.photoOfMe{
         font-family: Poppins;
         align-items: center;
     }  */
+
+    .nav {
+        display: flex;
+        /* height: -webkit-fill-available; */
+        align-items: center;
+    }
     .design_Div h1{
         font-size:  64px;
         font-weight: 800;
@@ -215,8 +270,8 @@ img.photoOfMe{
         align-self: center;
     }
     .design_Div p{
-        font-size:  10px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 700px;
         display: flex;
         flex-wrap: wrap;
     }
@@ -246,8 +301,9 @@ img.photoOfMe{
     
 }
 
+/*-----------------------------LAPTOP VIEW OF 1400 px------------------------------------------------*/
 
-@media only screen and (min-width: 1400px) , (max-width: 1440px){
+@media only screen and(min-width: 1440px){
     section{
         height: auto;
         /* height: 500px; */
@@ -259,7 +315,7 @@ img.photoOfMe{
     .header_Bar{
         height: 20px;
         color: white;
-        font-size: 10px;
+        font-size: 24px;
         font-family: 'Lato', sans-serif;
     }
     
@@ -269,12 +325,26 @@ img.photoOfMe{
         text-align: center;
         padding: 80px;
     }
+
+    .nav {
+        display: flex;
+        /* height: -webkit-fill-available; */
+        align-items: center;
+    }
     
+    .logo {
+        height: fit-content;
+        width: 175px;
+        text-align: center;
+    }
+
     ul {
         display: flex;
         list-style-type: none;
-        justify-content: space-evenly;
-        margin-top: 4px;
+        /* margin-top: -18px; */
+        justify-content: flex-end;
+        width: 1200px;
+        gap: 20px;
     }
     
     li {
@@ -284,7 +354,7 @@ img.photoOfMe{
     
     section.Design{
         background-color: white; 
-        height: 290px;
+        height: 748px;
     }
     
     .Design_Area {
@@ -298,22 +368,27 @@ img.photoOfMe{
     }
     
     strong{
-        text-shadow:
+        /* text-shadow:
          4px 0px 0px white, 
          0px 0px 0px #ff6767, 
          0px 0px 0px white,
          -2px -3px 0px #ff6767, 
-         0px -5px 0px #198dcf;
+         0px -5px 0px #198dcf; */
+         text-shadow:
+         15px 0px 0px white, 
+         7px 0px 0px #ff6767 , 
+         0px -7px 0px #ff6767, 
+         0px -12px 0px #198dcf;
         -webkit-text-stroke: thin;
         -webkit-text-fill-color: transparent;
-        font-size: 100px;
-        font-weight: 100;
+        font-size: 230px;
+        font-weight: 800;
         
     }
     
     p{
-        font-size: 10px;
-        font-weight: 900;
+        font-size: 24px;
+        font-weight: 700;
     }
     
     .aboutMe {
@@ -347,8 +422,8 @@ img.photoOfMe{
     } 
     
     .info{
-        font-size: 10px;
-        font-weight: 400px;
+        font-size: 18px;
+        font-weight: 700px;
     } 
     
     .designPage{
@@ -364,6 +439,8 @@ img.photoOfMe{
         flex-direction: column;
         /* width: 500px; */
         font-family: Poppins;
+        width: 700px;
+        margin-left: 230px;
         /* align-items: center; */
     }
     .design_Div h1 {
@@ -373,8 +450,8 @@ img.photoOfMe{
         /* align-self: center; */
     }
     .design_Div p {
-        font-size: 10px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 700px;
         /* width: 500px; */
         /* margin-left: 173px; */
     }
@@ -386,50 +463,50 @@ img.photoOfMe{
     }
     .grid_Container{
         display: flex;
-        column-gap: 130px;
-        margin-top: 15px;
+        column-gap: 72px;
+        margin-top: 34px;
     }
     .grid_Container1 {
         display: flex;
-        column-gap: 130px;
-        margin-top: 10px;
+        column-gap: 72px;
+        margin-top: 34px;
     }
     
-    .grid_Images{
-        height: 190px;
+    /* .grid_Images{
+        height: 175px;
         width: 160px;
         border: 1px solid white;
-    }
-    .grid_Images1{
+    } */
+    /* .grid_Images1{
         display: flex;
         flex-direction: row;
-        height: 190px;
+        height: 175px;
         width: 160px;
         border: 1px solid white;
-    }
+    } */
     
     .image1{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
     .image2{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
     .image3{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
     .image4{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
     .image5{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
     .image6{
-        height: 190px;
+        height: 175px;
         width: 160px;
     }
 }
