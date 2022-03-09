@@ -116,7 +116,6 @@ section.Design{
 .Design_Area {
     display: flex;
     flex-direction: column;
-    width: 90%;
     justify-content: center;
     align-items: center;
     text-align-last: center;
@@ -504,8 +503,7 @@ img#image6 {
     flex-direction: column;
     transform: translateX(-100px);
     opacity: 0;
-    /* transition-property: transform, opacity; */
-   /* transition-duration: 1s;*/
+    transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
