@@ -12,6 +12,6 @@ things finished as for now:
 things to be done:
 1. Responsive design
 2. WorksPage - Images to be done in GRID (as for now its not in grid)
-3. header - navBar(hamburger menu in mobile and tablets)
+3. header - navBar(hamburger menu in mobile and tablets as per design to be done with sticky positioning)
 4. no Side navBar for tab and mobile
 5.  
