@@ -86,6 +86,10 @@ li {
     cursor: pointer;
 }
 
+.menu-item :hover{
+    color: #198dcf;
+}
+
 #item1, #item2,#item3, #item4, #item5{
     color:#FF6767
 }
@@ -103,7 +107,10 @@ li {
 
 section.Design{
     background-color: white; 
+    position: relative;
+    height: 500px;
     padding: 80px;
+    width: 90%;
 }
 
 .Design_Area {
@@ -114,6 +121,9 @@ section.Design{
     align-items: center;
     text-align-last: center;
     font-family: 'Lato', sans-serif;
+    position: absolute;
+    left: 350px;
+    top: 120px;
 }
 
 strong{
@@ -177,12 +187,10 @@ img.photoOfMe{
     flex-direction: column;
     transform: translateX(-100px);
     opacity: 0;
-    /* transition-property: transform, opacity; */
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
-    /* top: 100px; */
 }
   
 
@@ -255,14 +263,12 @@ img.photoOfMe{
     border-radius: 29px;
 }
 
-
 .designBar {
     display: flex;
     padding: 0;
     flex-direction: column;
     transform: translateX(-100px);
     opacity: 0;
-    /* transition-property: transform, opacity; */
     transition-duration: 1s;
     position: absolute;
     height: 90%;
@@ -282,6 +288,7 @@ img.photoOfMe{
     font-family: Poppins;
     padding: 80px;
 }
+
 .service .service_Div{
     display: flex;
     flex-direction: column;
@@ -295,7 +302,6 @@ img.photoOfMe{
     align-items: center;
     margin-left: 211px;
 }
-
 
 .iconify{
     height: 200px;
@@ -312,12 +318,10 @@ img.photoOfMe{
     flex-direction: column;
     transform: translateX(-100px);
     opacity: 0;
-    /* transition-property: transform, opacity; */
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
-    /* top: 100px; */
 }
   
 .serviceBar:is(:hover) {
@@ -347,19 +351,16 @@ img.photoOfMe{
     flex-direction: column;
     transform: translateX(-100px);
     opacity: 0;
-    /* transition-property: transform, opacity; */
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
-    /* top: 100px; */
 }
   
 .workBar:is(:hover) {
     transform: translateX(0);
     opacity: 100%;
 }
-
 
 /* ========================================= Contact_Page ========================================== */
 
@@ -504,7 +505,7 @@ img#image6 {
     transform: translateX(-100px);
     opacity: 0;
     /* transition-property: transform, opacity; */
-    transition-duration: 1s;
+   /* transition-duration: 1s;*/
     position: absolute;
     height: 90%;
     width: 90%;
@@ -514,11 +515,10 @@ img#image6 {
 .contactBar:is(:hover) {
     transform: translateX(0);
     opacity: 100%;
-}
+} 
 
 
 /* ==========================================End_Page ================================================ */
-
 .end {
     background-color: white;
     color: black;
@@ -633,6 +633,8 @@ svg.iconify.iconify--akar-icons:hover{
     transform: translateY(-3px);
 } 
 
+/* ========================================== ScrollToTop Btn ======================================== */
+
 .gotopbtn {
     position: fixed;
     width: 50px;
@@ -652,5 +654,5 @@ svg.iconify.iconify--akar-icons:hover{
 
 .gotopbtn.visible{
     visibility: visible;
-    opacity: 1;
-}
+    opacity: 1; 
+} 
