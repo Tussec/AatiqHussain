@@ -3,7 +3,7 @@
 https://ganeshraaj1.github.io/Portfolio-Page/
 
 things finished as for now:
-1. basic design
+1. basic design for 1440px
 2. header - navBar
 3. socialIcons
 4. scroll to top button
