@@ -56,7 +56,7 @@ a {
     cursor: pointer;
 }
 
-ul {
+.nav ul {
     display: flex;
     position: absolute;
     right: 20px;
@@ -64,7 +64,7 @@ ul {
     gap: 20px;
 }
 
-li {
+.nav li {
     text-decoration: none;
     cursor: pointer;
 }
@@ -75,7 +75,7 @@ li {
 
 
 .menu-item {
-    width: 150px;
+    width: fit-content;
     max-height: 100px;
     color: white;
     border-radius: 8px;
@@ -160,6 +160,7 @@ strong{
     position: absolute;
     left: 164px;
 }
+
 img.photoOfMe{
     width: 300px;
     height: 300px;
@@ -179,23 +180,26 @@ img.photoOfMe{
     width: 500px;
 } 
 
+
 .wrapper {
     display: flex;
     padding: 0;
     flex-direction: column;
-    transform: translateX(-100px);
-    opacity: 0;
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
+    opacity: 0;
 }
-  
 
-.wrapper:is(:hover) {
-    transform: translateX(0);
-    opacity: 100%;
+.wrapper.visible{
+    visibility: visible;
+    opacity: 1; 
 }
+
+.wrapper.Nvisible{
+    opacity: 0; 
+} 
 
 /* ======================================== Design_Page ========================================== */
 
@@ -265,18 +269,21 @@ img.photoOfMe{
     display: flex;
     padding: 0;
     flex-direction: column;
-    transform: translateX(-100px);
-    opacity: 0;
     transition-duration: 1s;
     position: absolute;
-    height: 90%;
-    width: 90%;
+    visibility: hidden;
     top: 100px;
+    cursor: pointer;
+    opacity: 0;
 }
   
-.designBar:hover {
-    transform: translateX(0);
-    opacity: 100%;
+.designBar.visible {
+    visibility: visible;
+    opacity: 1; 
+}
+
+.designBar.Nvisible {
+    opacity: 0; 
 }
 
 /* ========================================= Service_Page ========================================== */
@@ -314,19 +321,21 @@ img.photoOfMe{
     display: flex;
     padding: 0;
     flex-direction: column;
-    transform: translateX(-100px);
-    opacity: 0;
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
+    opacity: 0;
 }
   
-.serviceBar:is(:hover) {
-    transform: translateX(0);
-    opacity: 100%;
+.serviceBar.visible {
+    visibility: visible;
+    opacity: 1; 
 }
 
+.serviceBar.Nvisible {
+    opacity: 0; 
+}
 
 /* ====================================== Work_Page ============================================== */
 
@@ -347,17 +356,100 @@ img.photoOfMe{
     display: flex;
     padding: 0;
     flex-direction: column;
-    transform: translateX(-100px);
-    opacity: 0;
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
+    opacity: 0;
 }
   
-.workBar:is(:hover) {
-    transform: translateX(0);
-    opacity: 100%;
+.workBar.visible {
+    visibility: visible;
+    opacity: 1; 
+}
+
+.workBar.Nvisible {
+    opacity: 0; 
+}
+
+.Work_Cont {
+    display: grid;
+    grid-template-columns: 151px 145px 0% 136px 136px auto 61px 10%;
+    grid-template-rows: 150px 150px 69px 57px 58px 0px auto;
+    margin-top: 20px;
+    height: 55vh;
+}
+
+.child {
+    background-color: red;
+    color: white;
+    font-size: 36px;
+}
+
+.child0 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.child1 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.child2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.child3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.child4 {
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.child5 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+img.work_Img {
+    height: 150px;
+    width: 136px;
+}
+
+.work_Img2{
+    height: 300px;
+    width: 136px;
+}
+
+.work_Img4{
+    height: 150px;
+    width: 296px;
+}
+
+.work_Img1{
+    height: 150px;
+    width: 151px;
+}
+
+.work_Img3{
+    height: 150px;
+    width: 145px;
 }
 
 /* ========================================= Contact_Page ========================================== */
@@ -367,6 +459,7 @@ img.photoOfMe{
     background: #04020F;
     height: 600px;
     position: relative;
+    padding-top: 5px;
 }
 
 .contact .contact_Div{
@@ -375,6 +468,7 @@ img.photoOfMe{
     font-family: Poppins;
     width: 700px;
     margin-left: 230px;
+    margin-top: 100px;
 }
 
 .row {
@@ -425,10 +519,6 @@ img#image6 {
     position: relative;
     left: 185px;
 }
-    
-.contact_Div{
-    margin-top: 100px;
-}
 
 .contact_Div p{
     width: 500px;
@@ -436,13 +526,14 @@ img#image6 {
 
 /* =========Social_Media_Icon============= */
 
-.social-Media {
+.social-Media{
     display: flex;
     text-align: center;
     gap: 20px;
-    position: relative;
-    top: 20px;
-    margin-left: 230px;
+    position: absolute;
+    /* top: 20px; */
+    bottom: 200px;
+    left: 300px;
 }
 
 .icon-button .fa,.fa-brands{
@@ -500,20 +591,22 @@ img#image6 {
     display: flex;
     padding: 0;
     flex-direction: column;
-    transform: translateX(-100px);
-    opacity: 0;
     transition-duration: 1s;
     position: absolute;
     height: 90%;
     width: 90%;
-    top: 110px;
+    top: 180px;
+    opacity: 0;
 }
   
-.contactBar:is(:hover) {
-    transform: translateX(0);
-    opacity: 100%;
-} 
+.contactBar.visible {
+    visibility: visible;
+    opacity: 1; 
+}
 
+.contactBar.Nvisible {
+    opacity: 0; 
+}
 
 /* ==========================================End_Page ================================================ */
 .end {
@@ -653,3 +746,558 @@ svg.iconify.iconify--akar-icons:hover{
     visibility: visible;
     opacity: 1; 
 } 
+
+@media (min-width: 1211px) and (max-width: 1310px){
+    img.photoOfMe {
+        width: 250px;
+        height: 250px;
+    }
+
+    .information {
+        left: 182px;
+    }
+
+    .horizontal-line {
+        width: 1051px;
+        left: 110px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1210px){
+    .Design_Area {
+        left: 175px;
+        top: 100px;
+    }
+
+    img.photoOfMe {
+        width: 250px;
+        height: 250px;
+    }
+
+    .information {
+        left: 182px;
+    }
+
+    .designPage .design_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .grid{
+        position: inherit;
+        left: 100px;
+    }
+
+    .service .service_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+    
+    .row1, .row2, .row3 {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .work .work_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .contact .contact_Div {
+        margin-left: 160px;
+        margin-top: 120px;
+    }
+
+    .contact_Div p {
+        width: auto;
+    }
+
+    .social-Media {
+        display: flex;
+        text-align: center;
+        gap: 20px;
+        position: absolute;
+        /* top: 20px; */
+        bottom: 200px;
+        left: 240px;
+    }
+
+    .end_Div {
+        left: 155px;
+    }
+
+    .XtraCaptions p {
+        width: 178px;
+    }
+
+    .horizontal-line {
+        width: 773px;
+        left: 110px;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .Design_Area {
+        left: 175px;
+    }
+
+    img.photoOfMe {
+        width: 250px;
+        height: 250px;
+    }
+
+    .information {
+        left: 182px;
+    }
+
+    .designPage .design_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .grid{
+        position: inherit;
+        left: 100px;
+    }
+
+    .service .service_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+    
+    .row1, .row2, .row3 {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .work .work_Div {
+        width: auto;
+        margin-left: 160px;
+    }
+
+    .contact .contact_Div {
+        margin-left: 160px;
+        margin-top: 120px;
+    }
+
+    .contact_Div p {
+        width: auto;
+    }
+
+    .social-Media {
+        display: flex;
+        text-align: center;
+        gap: 20px;
+        position: absolute;
+        /* top: 20px; */
+        bottom: 200px;
+        left: 240px;
+    }
+
+    .end_Div {
+        left: 155px;
+    }
+
+    .XtraCaptions p {
+        width: 178px;
+    }
+
+    .horizontal-line {
+        width: 773px;
+        left: 110px;
+    }
+}
+
+@media (max-width: 968px){
+
+    strong {
+        color: black;
+        text-shadow: 15px 0px 0px white, 7px 0px 0px #ff6767, 0px -7px 0px #ff6767, 0px -12px 0px #198dcf;
+        -webkit-text-stroke: thin;
+        -webkit-text-fill-color: transparent;
+        font-size: 115px;
+        font-weight: 800;
+    }
+
+    .aboutMe {
+        display: flex;
+        justify-content: space-around;
+        padding: 80px;
+        position: relative;
+        height: 752px;
+    }
+
+    .photo {
+        display: flex;
+        position: absolute;
+        left: 275px;
+        top: 50px;
+    }
+
+    .information {
+        align-self: center;
+        font-family: Poppins;
+        position: inherit;
+        left: 60px;
+        top: 90px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .grid_Container {
+        flex-direction: column;
+        float: left;
+        align-self: start;
+    }
+
+    .grid_Container1 {
+        flex-direction: column;
+        float: right;
+        align-self: self-end;
+    }
+
+    .Work_Cont {
+        display: grid;
+        grid-template-columns: 151px 145px 0% 136px 136px auto 61px 10%;
+        grid-template-rows: 150px 150px 69px 57px 122px 0px auto;
+        margin-top: 20px;
+        height: 100vh;
+    }
+
+    .child1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .work_Img2 {
+        height: 249px;
+        width: 151px;
+    }
+
+    .child4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 3;
+    }
+
+    img.work_Img {
+        height: 124px;
+        width: 145px;
+    }
+
+    .child5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .XtraCaptions p {
+        font-size: 18px;
+        width: 120px;
+    }
+
+    .horizontal-line {
+        border-top: 4px solid black;
+        height: 100px;
+        width: 700px;
+        display: flex;
+        position: absolute;
+        left: 110px;
+    }
+
+    .XtraCaptions p {
+        font-size: 18px;
+        width: 120px;
+    }
+
+    .end_Div h1 {
+        font-family: Inter;
+        font-size: 70px;
+    }
+
+    .end_Div .para {
+        margin-left: 0px;
+        width: 500px;
+    }
+
+    .XtraCaptions {
+        font-family: Gloria Hallelujah;
+        line-height: 25px;
+        text-align: center;
+        color: #FF6767;
+        position: absolute;
+        top: -31px;
+        left: 436px;
+        transform: rotate(346deg);
+    }
+
+    .turnicon {
+        position: absolute;
+        top: -74px;
+        right: -13px;
+        transform: rotate(27deg);
+    }
+
+    .contact .contact_Div {
+        display: flex;
+        flex-direction: column;
+        font-family: Poppins;
+        width: auto;
+        margin-top: 100px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 806px){
+
+    .XtraCaptions {
+        font-family: Gloria Hallelujah;
+        line-height: 25px;
+        text-align: center;
+        color: #FF6767;
+        position: absolute;
+        top: -31px;
+        left: 436px;
+        transform: rotate(346deg);
+    }
+
+    .turnicon {
+        position: absolute;
+        top: -74px;
+        right: -13px;
+        transform: rotate(27deg);
+    }
+
+    .horizontal-line {
+        border-top: 4px solid black;
+        height: 100px;
+        width: 544px;
+        display: flex;
+        position: absolute;
+        left: 110px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .aboutMe, .designPage, .service, .work, .contact {
+        position: unset;
+        padding: 0;
+
+    }
+
+    .work{
+        height: 1000px;
+    }
+
+    .service{
+        height: 1538px;
+    }
+    .designPage{
+        height: 1100px;
+    }
+
+
+    .Design{
+        padding: 0;
+    }
+
+    .contact{
+        padding-top: 5px;
+    }
+
+    .info{
+        width:auto
+    }
+
+    #nav-list{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    strong {
+        color: black;
+        text-shadow: 7px 0px 0px #ff6767,  3px 0px 0px white,  -6px 0px #198dcf;
+        -webkit-text-stroke: thin;
+        -webkit-text-fill-color: transparent;
+        font-size: 115px;
+        font-weight: 800;
+    }
+
+    .aboutMe {
+        display: flex;
+        justify-content: space-around;
+        height: 752px;
+    }
+
+    .photo {
+        display: flex;
+        position: absolute;
+        left: 110px;
+        top: 595px;
+    }
+
+    .information {
+        align-self: center;
+        font-family: Poppins;
+        margin-top: 145px;
+        margin-left: 50px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .grid_Container {
+        flex-direction: column;
+        float: left;
+        align-self: start;
+    }
+
+    .grid_Container1 {
+        flex-direction: column;
+        float: right;
+        align-self: self-end;
+    }
+
+    .Work_Cont {
+        display: grid;
+        grid-template-columns: 151px 145px 0% 136px 136px auto 61px 10%;
+        grid-template-rows: 150px 150px 69px 57px 122px 0px auto;
+        margin-top: 20px;
+        height: 100vh;
+        align-self: flex-end;
+    }
+
+    .child1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+
+    .work_Img2 {
+        height: 249px;
+        width: 151px;
+    }
+
+    .child4 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 3;
+    }
+
+    img.work_Img {
+        height: 124px;
+        width: 145px;
+    }
+
+    .child5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    .contact .contact_Div {
+        display: flex;
+        flex-direction: column;
+        font-family: Poppins;
+        width: auto;
+        margin-top: 100px;
+    }
+
+    .end_Div {
+        position: absolute;
+        left: 125px;
+        top: 132px;
+    }
+
+    .designPage .design_Div, .service .service_Div, .row1, .row2, .row3, .work .work_Div, .contact .contact_Div{
+        margin-left: 50px;
+    }
+
+    .XtraCaptions {
+        font-family: Gloria Hallelujah;
+        line-height: 25px;
+        text-align: center;
+        color: #FF6767;
+        position: absolute;
+        top: -65px;
+        left: 430px;
+        transform: rotate(346deg);
+    }
+
+    .XtraCaptions p {
+        font-size: 18px;
+        width: 120px;
+    }
+
+    .end_Div h1 {
+        font-family: Inter;
+        font-size: 70px;
+    }
+
+    .turnicon {
+        position: absolute;
+        top: -87px;
+        right: 0px;
+        transform: rotate(27deg);
+
+    }
+
+    .horizontal-line {
+        border-top: 4px solid black;
+        height: 100px;
+        width: 500px;
+        display: flex;
+        position: absolute;
+        left: 110px;
+    }
+
+    .end_Div .para {
+        margin-left: 0px;
+        width: 500px;
+    }
+
+    .wrapper, .designBar, .serviceBar, .workBar, .contactBar{
+       width: 0px;
+    }
+    .wrapper.visible, .designBar.visible, .serviceBar.visible, .workBar.visible, .contactBar.visible{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .social-Media{
+        position: absolute;
+        top: 5235px;
+        left: 100px;
+    }
+
+    .row1, .row2, .row3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .iconify{
+        height: 250px;
+        width: 150px;
+    }
+
+}
+
+
