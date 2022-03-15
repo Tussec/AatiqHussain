@@ -30,7 +30,6 @@ window.addEventListener('scroll', function(){
 })
 
 
-
 // to Find Overflow mistakes  use it in console
 
 
@@ -44,4 +43,3 @@ window.addEventListener('scroll', function(){
 //     }
 //   }
 // );
-
