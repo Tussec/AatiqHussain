@@ -1589,11 +1589,11 @@ svg.iconify.iconify--akar-icons:hover {
   .grid {
     justify-content: unset;
     margin-left: 70px;
-}
+  }
 
   .designPage {
     height: 900px;
-}
+  }
 
   .horizontal-line {
     width: 290px;
@@ -1635,7 +1635,7 @@ svg.iconify.iconify--akar-icons:hover {
     left: 75px;
     top: 120px;
     text-align-last: center;
-}
+  }
 
 }
 
