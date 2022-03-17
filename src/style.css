@@ -1586,6 +1586,11 @@ svg.iconify.iconify--akar-icons:hover {
 
 @media (max-width: 445px){
 
+  .grid {
+    justify-content: unset;
+    margin-left: 70px;
+}
+
   .designPage {
     height: 900px;
 }
