@@ -1372,6 +1372,14 @@ svg.iconify.iconify--akar-icons:hover {
 
 @media (max-width: 674px) {
 
+  .gotopbtn {
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 25px;
+    line-height: 43px;
+  }
+
   p {
     font-size: 13px;
     font-weight: 700px;
