@@ -1501,6 +1501,12 @@ svg.iconify.iconify--akar-icons:hover {
   .horizontal-line {
     width: 299px;
   }
+  .photo {
+    display: flex;
+    position: absolute;
+    left: 90px;
+    top: 595px;
+}
 
 }
 
