@@ -17,4 +17,4 @@ things done in this website:
 5. Side navBar to appear when in specific section and to disappear once moved (used CSS) (if possible will try in JS later)
 6. grid images done
 7. side navbar for tabs nd mobiles 
-8. Responsive design (maynot be Perfect but will be improving)
+8. Responsive design (maynot be Perfect but will be improving on future)
