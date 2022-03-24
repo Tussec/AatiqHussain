@@ -20,13 +20,13 @@ window.addEventListener('scroll', function(){
 })
 window.addEventListener('scroll', function(){
     var scroll = this.document.querySelector(".workBar");
-    scroll.classList.toggle("visible" , window.scrollY>2900)
+    scroll.classList.toggle("visible" , window.scrollY>2700)
     scroll.classList.toggle("Nvisible" , window.scrollY>3200)
 })
 window.addEventListener('scroll', function(){
     var scroll = this.document.querySelector(".contactBar");
-    scroll.classList.toggle("visible" , window.scrollY>3900)
-    scroll.classList.toggle("Nvisible" , window.scrollY>4200)
+    scroll.classList.toggle("visible" , window.scrollY>3200)
+    scroll.classList.toggle("Nvisible" , window.scrollY>5000)
 })
 
 

@@ -12,6 +12,7 @@
 
 /* ===========================================Common================================================= */
 
+
 section {
   background: black;
   color: white;
@@ -100,6 +101,13 @@ a {
 #item4,
 #item5 {
   color: #ff6767;
+}
+
+.endp{
+  font-size: 18px;
+  font-weight: 700px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 /* ================================== nav_Bar ================================================= */
@@ -1386,7 +1394,7 @@ svg.iconify.iconify--akar-icons:hover {
     font-size: 13px;
     font-weight: 700px;
     margin-top: 10px;
-    padding-right: 20px;
+    /* padding-right: 20px; */
   }
   
   
@@ -1495,7 +1503,7 @@ svg.iconify.iconify--akar-icons:hover {
   .turnicon {
     position: absolute;
     top: -9px;
-    right: 20px;
+    right: -17px;
     transform: rotate(27deg);
   }
 
@@ -1515,12 +1523,16 @@ svg.iconify.iconify--akar-icons:hover {
     display: flex;
     position: absolute;
     left: 90px;
-    top: 595px;
+    top: 575px;
 }
 
 }
 
 @media (max-width: 485px){
+
+  p {
+    padding-right: 20px;
+}
 
   .aboutMe {
     height: 493px;
@@ -1573,14 +1585,14 @@ svg.iconify.iconify--akar-icons:hover {
   .XtraCaptions {
     top: -59px;
     left: 218px;
-}
+  }
 
-.turnicon {
-  position: absolute;
-  top: -26px;
-  right: 20px;
-  transform: rotate(27deg);
-}
+  .turnicon {
+    position: absolute;
+    top: -26px;
+    right: 0px;
+    transform: rotate(27deg);
+  }
 
   .end {
     height: 343px;
@@ -1736,7 +1748,7 @@ svg.iconify.iconify--akar-icons:hover {
   .turnicon {
     position: absolute;
     top: -26px;
-    right: 28px;
+    right: 9px;
     transform: rotate(27deg);
   }
 
