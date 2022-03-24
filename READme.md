@@ -2,6 +2,12 @@
 
 https://ganeshraaj1.github.io/Portfolio-Page/
 
+------------------------------- UI --------------------------------
+
+https://www.figma.com/proto/OW9jGMWUE6aQ9BXfEAccDe/PORTFOLIO-A?scaling=min-zoom&page-id=0%3A1&node-id=1%3A3
+
+-------------------------------------------------------------------
+
 things done in this website:
 
 1. basic design for 1440px
