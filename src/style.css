@@ -1733,7 +1733,7 @@ svg.iconify.iconify--akar-icons:hover {
   }
 
   .work {
-    height: 1067px;
+    height: 780px;
   }
 
   .end_Div {
@@ -1743,16 +1743,17 @@ svg.iconify.iconify--akar-icons:hover {
   }
 
   .grid {
+    gap: 30px;
     justify-content:unset;
-    margin-left: 70px;
+    margin-left: 80px;
   }
 
   .designPage {
-    height: 945px;
+    height: 855px;
   }
 
   .service {
-    height: 1225px;
+    height: 1210px;
   }
 
   .Work_Cont {
@@ -1772,10 +1773,6 @@ svg.iconify.iconify--akar-icons:hover {
     top: -26px;
     right: 9px;
     transform: rotate(27deg);
-  }
-
-  .grid {
-    gap: 30px;
   }
 
   .horizontal-line {
