@@ -1185,10 +1185,10 @@ svg.iconify.iconify--akar-icons:hover {
   }
 
   .service {
-    height: 1538px;
+    height: 1360px;
   }
   .designPage {
-    height: 1100px;
+    height: 1020px;
   }
 
   .Design {
@@ -1382,6 +1382,22 @@ svg.iconify.iconify--akar-icons:hover {
 
 @media (max-width: 674px) {
 
+  .grid {
+    margin-left: 70px;
+  }
+
+  .designPage {
+    height: 870px;
+  }
+
+  .service {
+    height: 1175px;
+  }
+
+  .work {
+    height: 730px;
+  }
+
   .gotopbtn {
     width: 40px;
     height: 40px;
@@ -1424,7 +1440,7 @@ svg.iconify.iconify--akar-icons:hover {
     left: 110px;
   }
   .Work_Cont {
-    align-self: auto;
+      margin-left: 32px;
   }
 
   .social_MediaCR {
@@ -1535,7 +1551,7 @@ svg.iconify.iconify--akar-icons:hover {
 }
 
   .aboutMe {
-    height: 493px;
+    height: 600px;
   }
 
   img.photoOfMe {
@@ -1616,7 +1632,13 @@ svg.iconify.iconify--akar-icons:hover {
 
   .grid {
     justify-content: unset;
-    margin-left: 70px;
+    margin-left: 0px; 
+    justify-content: end;
+  }
+
+  .Work_Cont {
+    align-self: auto;
+    margin-left: 0px;
   }
 
   .designPage {
@@ -1707,7 +1729,7 @@ svg.iconify.iconify--akar-icons:hover {
   }
 
   .information {
-    margin-top: 205px;
+    margin-top: 220px;
   }
 
   .work {
@@ -1730,13 +1752,13 @@ svg.iconify.iconify--akar-icons:hover {
   }
 
   .service {
-    height: 1370px;
+    height: 1225px;
   }
 
   .Work_Cont {
     align-self: auto;
     position: relative;
-    right: 29px;
+    right: 37px;
   }
 
 
@@ -1786,5 +1808,12 @@ svg.iconify.iconify--akar-icons:hover {
     border-radius: 30px 30px 0px 0px;
     text-align-last: center;
     font-size: 20px;
+  }
+
+}
+
+@media (max-width: 320px){
+  .grid {
+    margin-left: 70px;
   }
 }
